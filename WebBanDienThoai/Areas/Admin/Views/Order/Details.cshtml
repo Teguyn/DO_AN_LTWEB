@@ -1,0 +1,44 @@
+﻿@model WebBanDienThoai.Models.Order
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Chi tiết đơn hàng";
+}
+
+<h2>Chi tiết đơn hàng #@Model.Id</h2>
+
+<div class="mb-4">
+    <strong>Khách hàng:</strong> @Model.ApplicationUser?.FullName <br />
+    <strong>Ngày đặt:</strong> @Model.OrderDate.ToString("dd/MM/yyyy HH:mm") <br />
+    <strong>Địa chỉ giao hàng:</strong> @Model.ShippingAddress <br />
+    <strong>Ghi chú:</strong> @(string.IsNullOrWhiteSpace(Model.Notes) ? "(Không có)" : Model.Notes) <br />
+    <strong>Trạng thái:</strong> <span class="badge bg-info">@Model.Status</span>
+</div>
+
+<h4>Sản phẩm trong đơn</h4>
+<table class="table table-bordered table-hover">
+    <thead class="table-light">
+        <tr>
+            <th>Sản phẩm</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+            <th>Tạm tính</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrderDetails)
+        {
+            <tr>
+                <td>@item.Product?.Name</td>
+                <td>@item.Price.ToString("N0") ₫</td>
+                <td>@item.Quantity</td>
+                <td>@((item.Price * item.Quantity).ToString("N0")) VNĐ</td>
+            </tr>
+        }
+        <tr class="table-secondary">
+            <td colspan="3" class="text-end"><strong>Tổng cộng:</strong></td>
+            <td><strong>@Model.TotalPrice.ToString("N0") ₫</strong></td>
+        </tr>
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-secondary ms-2">⬅️ Quay lại</a>

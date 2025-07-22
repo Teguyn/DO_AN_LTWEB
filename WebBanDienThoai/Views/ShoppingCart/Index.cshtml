@@ -1,0 +1,150 @@
+﻿@model WebBanDienThoai.Models.ShoppingCart
+
+@{
+    ViewData["Title"] = "Giỏ hàng của bạn";
+}
+
+@if (TempData["PaymentError"] != null)
+{
+    <div class="alert alert-danger" id="paymentError">
+        @TempData["PaymentError"]
+    </div>
+    <script>
+        setTimeout(() => document.getElementById("paymentError").style.display = "none", 3000);
+    </script>
+}
+
+<div class="container py-5">
+    <h2 class="text-center fw-bold mb-5">Giỏ hàng của bạn</h2>
+
+    @if (Model.Items.Count == 0)
+    {
+        <div class="text-center text-muted">
+            <p>Không có sản phẩm nào trong giỏ hàng.</p>
+            <a href="@Url.Action("Index", "Product")" class="btn btn-outline-primary mt-3">Tiếp tục mua hàng</a>
+        </div>
+    }
+    else
+    {
+        <form asp-action="Checkout" asp-controller="ShoppingCart" method="post" id="checkoutForm">
+            <input type="hidden" name="QuantitiesJson" id="QuantitiesJson" />
+
+            <div class="row g-4">
+                <!-- Giỏ hàng chi tiết -->
+                <div class="col-md-8">
+                    <div class="table-responsive shadow-sm">
+                        <table class="table table-bordered text-center align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th></th>
+                                    <th>Hình ảnh</th>
+                                    <th>Sản phẩm</th>
+                                    <th>Giá</th>
+                                    <th>Số lượng</th>
+                                    <th>Xóa</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Items)
+                                {
+                                    <tr data-product-id="@item.ProductId">
+                                        <td><input type="checkbox" class="form-check-input select-item" /></td>
+                                        <td><img src="@item.ImageUrl" class="img-fluid" style="width: 80px; height: 80px;" /></td>
+                                        <td>
+                                            <strong>@item.Name</strong>
+                                            <div class="text-muted">Mã SP: <span class="product-id">@item.ProductId</span></div>
+                                        </td>
+                                        <td>@item.Price.ToString("N0") VNĐ</td>
+                                        <td>
+                                            <div class="input-group input-group-sm justify-content-center">
+                                                <button type="button" class="btn btn-outline-secondary quantity-btn">-</button>
+                                                <input type="text" class="form-control text-center quantity-input" value="@item.Quantity" data-unit-price="@item.Price" style="max-width: 50px;" />
+                                                <button type="button" class="btn btn-outline-secondary quantity-btn">+</button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a asp-action="RemoveFromCart" asp-route-productId="@item.ProductId" class="btn btn-outline-danger btn-sm">Xóa</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tóm tắt và thanh toán -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm p-4">
+                        <h5 class="fw-bold mb-3 text-center">Tóm tắt đơn hàng</h5>
+                        <div class="mb-2">
+                            <span class="text-muted">Tổng tiền giỏ hàng:</span>
+                            <span class="float-end text-danger fw-bold total-cart"></span>
+                        </div>
+                        <div class="mb-3">
+                            <span class="text-muted">Tổng tiền đã chọn:</span>
+                            <span class="float-end text-primary fw-bold total-selected"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 mt-3" onclick="prepareQuantities()">Tiến hành thanh toán</button>
+                        <a href="@Url.Action("Index", "Product")" class="btn btn-outline-secondary w-100 mt-2">Tiếp tục mua hàng</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        function updateTotals() {
+            let totalCart = 0;
+            let totalSelected = 0;
+
+            document.querySelectorAll("tbody tr").forEach(row => {
+                const quantity = parseInt(row.querySelector(".quantity-input").value) || 1;
+                const unitPrice = parseFloat(row.querySelector(".quantity-input").dataset.unitPrice) || 0;
+                const lineTotal = quantity * unitPrice;
+                totalCart += lineTotal;
+
+                if (row.querySelector(".select-item").checked) {
+                    totalSelected += lineTotal;
+                }
+            });
+
+            document.querySelector(".total-cart").textContent = totalCart.toLocaleString('vi-VN') + " VNĐ";
+            document.querySelector(".total-selected").textContent = totalSelected.toLocaleString('vi-VN') + " VNĐ";
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".quantity-btn").forEach(btn => {
+                btn.addEventListener("click", function () {
+                    const input = this.parentElement.querySelector(".quantity-input");
+                    let value = parseInt(input.value, 10);
+                    if (this.innerText === "+" && value < 10) input.value = value + 1;
+                    else if (this.innerText === "-" && value > 1) input.value = value - 1;
+                    updateTotals();
+                });
+            });
+
+            document.querySelectorAll(".quantity-input, .select-item").forEach(el => {
+                el.addEventListener("input", updateTotals);
+                el.addEventListener("change", updateTotals);
+            });
+
+            updateTotals();
+        });
+
+        function prepareQuantities() {
+            const data = {};
+            document.querySelectorAll("tbody tr").forEach(row => {
+                const isChecked = row.querySelector(".select-item").checked;
+                if (isChecked) {
+                    const productId = parseInt(row.querySelector(".product-id").textContent.trim());
+                    const quantity = parseInt(row.querySelector(".quantity-input").value) || 1;
+                    data[productId] = quantity;
+                }
+            });
+            document.getElementById("QuantitiesJson").value = JSON.stringify(data);
+        }
+    </script>
+}

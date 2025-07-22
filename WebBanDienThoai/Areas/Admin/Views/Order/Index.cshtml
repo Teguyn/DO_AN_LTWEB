@@ -1,0 +1,72 @@
+﻿@model PaginatedList<WebBanDienThoai.Models.Order>
+@using WebBanDienThoai.Models
+@using WebBanDienThoai.Helpers
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Quản lý đơn hàng";
+}
+
+<h2 class="mb-4 fw-bold">Quản lý đơn hàng</h2>
+
+<!-- 🔍 FORM LỌC -->
+<form method="get" class="row g-3 mb-4">
+    <div class="col-md-4">
+        <input type="text" name="userFilter" value="@ViewData["UserFilter"]" class="form-control" placeholder="Tìm theo tên khách hàng..." />
+    </div>
+    <div class="col-md-4">
+        <select name="statusFilter" class="form-select">
+            <option value="">-- Tất cả trạng thái --</option>
+            @foreach (OrderStatus status in Enum.GetValues(typeof(OrderStatus)))
+            {
+                <option value="@status" selected="@(ViewData["StatusFilter"]?.ToString() == status.ToString())">
+                    @Html.DisplayOrderStatus(status)
+                </option>
+            }
+        </select>
+    </div>
+    <div class="col-md-4">
+        <button type="submit" class="btn btn-primary w-100">Lọc đơn hàng</button>
+    </div>
+</form>
+
+<!-- 📋 BẢNG ĐƠN HÀNG -->
+<table class="table table-bordered table-hover">
+    <thead class="table-light text-center">
+        <tr>
+            <th>Mã đơn</th>
+            <th>Khách hàng</th>
+            <th>Ngày đặt</th>
+            <th>Tổng tiền</th>
+            <th>Trạng thái</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody class="align-middle">
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td class="text-center">#@order.Id</td>
+                <td>@order.ApplicationUser?.FullName</td>
+                <td class="text-center">@order.OrderDate.ToString("dd/MM/yyyy HH:mm")</td>
+                <td class="text-end text-danger fw-bold">@order.TotalPrice.ToString("N0") ₫</td>
+                <td class="text-center">@Html.DisplayOrderStatus(order.Status)</td>
+                <td class="text-center">
+                    <a asp-action="Details" asp-route-id="@order.Id" class="btn btn-sm btn-outline-primary me-1">Chi tiết</a>
+                    @if (order.Status == OrderStatus.Pending)
+                    {
+                        <form asp-action="ConfirmOrder" asp-route-id="@order.Id" method="post" class="d-inline">
+                            <button class="btn btn-sm btn-success me-1">✔Xác nhận</button>
+                        </form>
+                        <form asp-action="CancelOrder" asp-route-id="@order.Id" method="post" class="d-inline">
+                            <button class="btn btn-sm btn-danger">✖ Hủy</button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- 📄 PHÂN TRANG -->
+@await Html.PartialAsync("_PaginationPartial", Model)

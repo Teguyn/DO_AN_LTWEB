@@ -1,0 +1,244 @@
+﻿@model IEnumerable<WebBanDienThoai.Models.Product>
+
+@{
+    ViewData["Title"] = "Sản Phẩm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Sản Phẩm</h2>
+    <div class="row">
+        <!-- Bộ lọc sidebar -->
+        <div class="col-lg-3">
+            <div class="filter-sidebar p-4 shadow-sm">
+                <form asp-action="Index" method="get">
+                    <!-- Category Filter -->
+                    <h6 class="mb-3">Danh Mục</h6>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="categoryId"
+                               value="" @(string.IsNullOrEmpty(ViewBag.CategoryId.ToString()) ? "checked" : "")>
+                        <label class="form-check-label" for="category_all">Tất cả</label>
+                    </div>
+                    @foreach (var category in ViewBag.Categories)
+                    {
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="categoryId"
+                                   value="@category.Id" @(ViewBag.CategoryId == category.Id ? "checked" : "")>
+                            <label class="form-check-label" for="category_@category.Id">@category.Name</label>
+                        </div>
+                    }
+
+                    <!-- Price Filter -->
+                    <h6 class="mt-4 mb-3">Khoảng giá</h6>
+                    <div class="mb-3">
+                        <label for="minPrice">Từ:</label>
+                        <input type="number" name="minPrice" value="@ViewBag.MinPrice" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="maxPrice">Đến:</label>
+                        <input type="number" name="maxPrice" value="@ViewBag.MaxPrice" class="form-control">
+                    </div>
+                    <!-- Apply Filters Button -->
+                    <button type="submit" class="btn btn-outline-primary w-100 mt-3">Áp Dụng Bộ Lọc</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Hiển thị các sản phẩm -->
+        <div class="col-lg-9">
+            <div class="row g-4">
+                @foreach (var product in Model)
+                {
+                    <div class="col-md-4">
+                        <div class="product-card shadow-sm">
+                            <div class="position-relative">
+                                <a href="@Url.Action("Display", "Product", new { id = product.Id })">
+                                    <img src="@product.ImageUrl" class="product-image w-100" alt="@product.Name">
+                                </a>
+                                @if (product.DiscountPercent > 0)
+                                {
+                                    <span class="discount-badge">-@product.DiscountPercent%</span>
+                                }
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">@product.Name</h5>
+                                <span class="category-badge mb-2 d-inline-block">@product.Category.Name</span>
+                                <div class="rating-stars mb-2">
+                                    @for (int i = 1; i <= 5; i++)
+                                    {
+                                        if (i <= product.Rating)
+                                        {
+                                            <i class="bi bi-star-fill"></i>
+                                        }
+                                        else
+                                        {
+                                            <i class="bi bi-star"></i>
+                                        }
+                                    }
+                                    <span class="text-muted ms-2">(@product.Rating)</span>
+                                </div>
+
+                                <!-- Hiển thị giá -->
+                                <div class="product-price">
+                                    @if (product.DiscountPercent > 0)
+                                    {
+                                        <del>@product.Price.ToString("N0") VNĐ</del> <!-- Giá gốc bị gạch ngang -->
+                                        <h6 class="text-danger fw-bold">@product.DiscountedPrice.ToString("N0") VNĐ</h6> <!-- Giá sau giảm -->
+                                    }
+                                    else
+                                    {
+                                        <h6 class="text-danger fw-bold">@product.Price.ToString("N0") VNĐ</h6> <!-- Giá không giảm -->
+                                    }
+                                </div>
+
+                                <!-- Nút Mua -->
+                                <div class="d-flex justify-content-center gap-2 mt-3">
+                                    @if (User.Identity.IsAuthenticated && !User.IsInRole("Admin"))
+                                    {
+                                        <a href="@Url.Action("Buy", "Product", new { id = product.Id })" class="btn btn-danger btn-sm">Mua</a>
+                                    }
+                                    else if (User.IsInRole("Admin"))
+                                    {
+                                        <button class="btn btn-secondary btn-sm" disabled>Mua</button>
+                                    }
+                                    else
+                                    {
+                                        <a asp-area="Identity" asp-page="/Account/Login" class="btn btn-secondary btn-sm">
+                                            <i class="bi bi-cart-fill me-2"></i> Mua
+                                        </a>
+
+                                    }
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+
+            <!-- Phân trang -->
+            <div class="d-flex justify-content-center mt-4">
+                <ul class="pagination">
+                    <!-- Trang trước -->
+                    @if (ViewBag.PageNumber > 1)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" href="@Url.Action("Index", "Product", new {
+                    pageNumber = ViewBag.PageNumber - 1,
+                    categoryId = ViewBag.CategoryId,
+                    minPrice = ViewBag.MinPrice,
+                    maxPrice = ViewBag.MaxPrice
+                })">«</a>
+                        </li>
+                    }
+
+                    <!-- Các số trang -->
+                    @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                    {
+                        <li class="page-item @(i == ViewBag.PageNumber ? "active" : "")">
+                            <a class="page-link" href="@Url.Action("Index", "Product", new {
+                    pageNumber = i,
+                    categoryId = ViewBag.CategoryId,
+                    minPrice = ViewBag.MinPrice,
+                    maxPrice = ViewBag.MaxPrice
+                })">@i</a>
+                        </li>
+                    }
+
+                    <!-- Trang sau -->
+                    @if (ViewBag.PageNumber < ViewBag.TotalPages)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" href="@Url.Action("Index", "Product", new {
+                    pageNumber = ViewBag.PageNumber + 1,
+                    categoryId = ViewBag.CategoryId,
+                    minPrice = ViewBag.MinPrice,
+                    maxPrice = ViewBag.MaxPrice
+                })">»</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<style>
+    .filter-sidebar {
+        background: #fff;
+        border-radius: 10px;
+    }
+
+    .form-check-input:checked {
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+
+    .product-card {
+        background: white;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-image {
+        height: 200px;
+        object-fit: contain;
+        border-radius: 12px 12px 0 0;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .card-body {
+        padding: 10px;
+        flex-grow: 1;
+    }
+
+    .card-title {
+        min-height: 50px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    h6.text-danger {
+        min-height: 40px;
+        line-height: 1.5;
+    }
+
+    .category-badge {
+        background: #e5e7eb;
+        color: #4b5563;
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-size: 0.75rem;
+    }
+
+    .rating-stars i {
+        color: #fbbf24;
+    }
+
+    .discount-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #dc2626;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-size: 0.875rem;
+    }
+</style>

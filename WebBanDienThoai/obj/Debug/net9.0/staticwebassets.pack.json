@@ -1,0 +1,429 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WebBanDienThoai.bundle.scp.css",
+      "PackagePath": "staticwebassets\\WebBanDienThoai.mih1uf21gd.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\0029038_den_550.jpeg",
+      "PackagePath": "staticwebassets\\images\\0029038_den_550.jpeg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\2023_10_31_638343389526851003_oppo-a18-den-3.jpg",
+      "PackagePath": "staticwebassets\\images\\2023_10_31_638343389526851003_oppo-a18-den-3.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\2023_1_30_638106973187152721_oppo-reno8-t-4g-cam-2.jpg",
+      "PackagePath": "staticwebassets\\images\\2023_1_30_638106973187152721_oppo-reno8-t-4g-cam-2.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\4253-02-2000-acc-LTHO.jpg.thumb.480.480.jpg",
+      "PackagePath": "staticwebassets\\images\\4253-02-2000-acc-LTHO.jpg.thumb.480.480.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\6521-1440-pkg-LTHO.jpg.thumb.768.768.jpg",
+      "PackagePath": "staticwebassets\\images\\6521-1440-pkg-LTHO.jpg.thumb.768.768.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\6649-3-720-mai-LTHO.webp",
+      "PackagePath": "staticwebassets\\images\\6649-3-720-mai-LTHO.webp"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\7363-1440-pkg-LTHO.jpg.thumb.768.768.jpg",
+      "PackagePath": "staticwebassets\\images\\7363-1440-pkg-LTHO.jpg.thumb.768.768.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\LAPTOP.jpg",
+      "PackagePath": "staticwebassets\\images\\LAPTOP.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\Monitor.jpg",
+      "PackagePath": "staticwebassets\\images\\Monitor.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\RobloxScreenShot20250116_063949520.png",
+      "PackagePath": "staticwebassets\\images\\RobloxScreenShot20250116_063949520.png"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\Smartphone.jpg",
+      "PackagePath": "staticwebassets\\images\\Smartphone.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\Tablet.jpg",
+      "PackagePath": "staticwebassets\\images\\Tablet.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\acer-aspire-7-a715-76-53pj-i5-nhqgesv007-3-638766081284251053-750x500.jpg",
+      "PackagePath": "staticwebassets\\images\\acer-aspire-7-a715-76-53pj-i5-nhqgesv007-3-638766081284251053-750x500.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\asus-vivobook-go-15-e1504fa-r5-nj776w-glr-2-750x500.jpg",
+      "PackagePath": "staticwebassets\\images\\asus-vivobook-go-15-e1504fa-r5-nj776w-glr-2-750x500.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\cap-type-c-type-c-2m-xmobile-dr-t11-1-750x500.jpg",
+      "PackagePath": "staticwebassets\\images\\cap-type-c-type-c-2m-xmobile-dr-t11-1-750x500.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\grey-1-750x500.jpg",
+      "PackagePath": "staticwebassets\\images\\grey-1-750x500.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\hp-15-fc0085au-r5-a6vv8pa-glr-2-638624254802444044-750x500.jpg",
+      "PackagePath": "staticwebassets\\images\\hp-15-fc0085au-r5-a6vv8pa-glr-2-638624254802444044-750x500.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\images.jpg",
+      "PackagePath": "staticwebassets\\images\\images.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\iphone-12-5-1-750x500.jpg",
+      "PackagePath": "staticwebassets\\images\\iphone-12-5-1-750x500.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\iphone-16-pro-max-titan-sa-mac-2-638638962343879149-750x500.jpg",
+      "PackagePath": "staticwebassets\\images\\iphone-16-pro-max-titan-sa-mac-2-638638962343879149-750x500.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\iphone-16e-black-1-638756437699035701-750x500.jpg",
+      "PackagePath": "staticwebassets\\images\\iphone-16e-black-1-638756437699035701-750x500.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\oppo_find_x8_space_black_1_6a9c3746b3.png",
+      "PackagePath": "staticwebassets\\images\\oppo_find_x8_space_black_1_6a9c3746b3.png"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\phieudangkydoancoso (1).jpg",
+      "PackagePath": "staticwebassets\\images\\phieudangkydoancoso (1).jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\phieutiendo (1).jpg",
+      "PackagePath": "staticwebassets\\images\\phieutiendo (1).jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\phieutiendo.jpg",
+      "PackagePath": "staticwebassets\\images\\phieutiendo.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\phong-suite-la-gi-01.jpg",
+      "PackagePath": "staticwebassets\\images\\phong-suite-la-gi-01.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\samssung_galaxy_a36_den_4d1a971013.jpg",
+      "PackagePath": "staticwebassets\\images\\samssung_galaxy_a36_den_4d1a971013.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\samsung_galaxy_a06_5g_den_129610b5f2.png",
+      "PackagePath": "staticwebassets\\images\\samsung_galaxy_a06_5g_den_129610b5f2.png"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\sm-s938_galaxys25ultra_front_titaniumblack_241107.png",
+      "PackagePath": "staticwebassets\\images\\sm-s938_galaxys25ultra_front_titaniumblack_241107.png"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\tai-nghe-bluetooth-chup-tai-havit-h661bt-2-750x500.jpg",
+      "PackagePath": "staticwebassets\\images\\tai-nghe-bluetooth-chup-tai-havit-h661bt-2-750x500.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\top-5-khach-san-tong-thong-8-5-2019-7-e1557295940377.jpg",
+      "PackagePath": "staticwebassets\\images\\top-5-khach-san-tong-thong-8-5-2019-7-e1557295940377.jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\Ảnh chụp màn hình 2024-12-15 115743.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình 2024-12-15 115743.png"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\Ảnh chụp màn hình 2024-12-15 122457.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình 2024-12-15 122457.png"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\Ảnh chụp màn hình 2024-12-15 125702.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình 2024-12-15 125702.png"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\Ảnh chụp màn hình 2024-12-19 134837.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình 2024-12-19 134837.png"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\Ảnh chụp màn hình 2024-12-26 151239.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình 2024-12-26 151239.png"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\Ảnh chụp màn hình 2024-12-28 140527.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình 2024-12-28 140527.png"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\Ảnh chụp màn hình 2025-03-04 110202.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình 2025-03-04 110202.png"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\Ảnh chụp màn hình 2025-03-05 104641.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình 2025-03-05 104641.png"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\images\\ảnh đầu lâu .jpg",
+      "PackagePath": "staticwebassets\\images\\ảnh đầu lâu .jpg"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\from wsc\\LTWeb_22DTHA1\\LTWeb_22DTHA1\\tieuhoangphuc_tuan3\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.WebBanDienThoai.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.WebBanDienThoai.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.WebBanDienThoai.props",
+      "PackagePath": "build\\WebBanDienThoai.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.WebBanDienThoai.props",
+      "PackagePath": "buildMultiTargeting\\WebBanDienThoai.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.WebBanDienThoai.props",
+      "PackagePath": "buildTransitive\\WebBanDienThoai.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

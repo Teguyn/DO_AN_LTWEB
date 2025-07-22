@@ -1,0 +1,27 @@
+﻿@model WebBanDienThoai.Models.Order
+@{
+    ViewData["Title"] = "Đặt hàng thành công";
+}
+
+<div class="container py-5 d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow p-4 p-md-5" style="max-width: 600px; width: 100%; border-radius: 16px;">
+        <div class="text-center mb-4">
+            <h2 class="text-primary fw-bold mb-3">Đặt hàng thành công</h2>
+            <p class="text-secondary">Cảm ơn bạn đã đặt hàng tại <strong>Web Bán Điện Thoại</strong>!</p>
+        </div>
+
+        <div class="border-top pt-4">
+            <h5 class="fw-semibold mb-3">Thông tin đơn hàng</h5>
+            <div class="mb-2"><strong>Mã đơn hàng:</strong> #@Model.Id</div>
+            <div class="mb-2"><strong>Thời gian:</strong> @Model.OrderDate.ToString("dd/MM/yyyy HH:mm")</div>
+            <div class="mb-2"><strong>Tổng tiền:</strong> @Model.TotalPrice.ToString("N0") VNĐ</div>
+            <div><strong>Phương thức thanh toán:</strong> @Model.Notes</div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="@Url.Action("Index", "Home")" class="btn btn-outline-primary px-4 py-2 rounded-pill">
+                Tiếp tục mua sắm
+            </a>
+        </div>
+    </div>
+</div>

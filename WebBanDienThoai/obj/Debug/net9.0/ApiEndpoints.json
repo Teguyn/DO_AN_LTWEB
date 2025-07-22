@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "WebBanDienThoai.Controllers.ChatController",
+    "Method": "LoadMessages",
+    "RelativePath": "Chat/LoadMessages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebBanDienThoai.Controllers.ChatController",
+    "Method": "SendMessage",
+    "RelativePath": "Chat/SendMessage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "message",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

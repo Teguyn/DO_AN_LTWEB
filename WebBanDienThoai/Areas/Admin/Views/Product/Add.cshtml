@@ -1,0 +1,96 @@
+﻿@model WebBanDienThoai.Models.Product
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Thêm sản phẩm";
+}
+
+<h2 class="mb-4 text-primary">➕ Thêm Sản Phẩm Mới</h2>
+
+<form asp-area="Admin" asp-controller="Product" asp-action="Add" method="post" enctype="multipart/form-data">
+    <div class="form-group mb-3">
+        <label asp-for="Name" class="form-label">Tên sản phẩm</label>
+        <input asp-for="Name" class="form-control" placeholder="Nhập tên sản phẩm..." required />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Price" class="form-label">Giá sản phẩm (VNĐ)</label>
+        <input asp-for="Price" type="number" class="form-control" placeholder="Nhập giá..." required />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="DiscountPercent" class="form-label">Giảm giá (%)</label>
+        <input asp-for="DiscountPercent" type="number" class="form-control" placeholder="Nhập giảm giá (0 - 100)" min="0" max="100" />
+        <span asp-validation-for="DiscountPercent" class="text-danger"></span>
+    </div>
+
+
+    <div class="form-group mb-3">
+        <label asp-for="CategoryId" class="form-label">Danh mục</label>
+        <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-control" required>
+            <option value="">-- Chọn danh mục --</option>
+        </select>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="ImageUrl" class="form-label">Ảnh sản phẩm</label>
+        <input type="file" name="imageUrl" class="form-control" id="imageInput" accept="image/*" required />
+        <div class="mt-2">
+            <img id="previewImage" src="#" alt="Ảnh xem trước" class="d-none"
+                 style="max-width: 200px; border: 1px solid #ddd; padding: 5px;" />
+        </div>
+    </div>
+    <div class="form-group mb-3">
+        <label asp-for="Description" class="form-label">Mô tả sản phẩm</label>
+        <textarea asp-for="Description" class="form-control" id="editor" rows="5" placeholder="Nhập mô tả..." required></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Lưu sản phẩm</button>
+    <a asp-action="Index" asp-area="Admin" asp-controller="Product" class="btn btn-secondary ms-2">Quay lại</a>
+</form>
+
+@section Scripts {
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .catch(error => {
+                console.error('Lỗi CKEditor:', error);
+            });
+
+        // Hiển thị ảnh xem trước
+        document.getElementById("imageInput").addEventListener("change", function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.getElementById("previewImage");
+                    img.src = e.target.result;
+                    img.classList.remove("d-none");
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+  
+
+        // Tính giá sau giảm và hiển thị
+        document.getElementById("DiscountPercent").addEventListener("input", function () {
+            const price = parseFloat(document.getElementById("Price").value);
+            const discountPercent = parseFloat(document.getElementById("DiscountPercent").value);
+            if (price && discountPercent >= 0 && discountPercent <= 100) {
+                const discountedPrice = price - (price * discountPercent / 100);
+                document.getElementById("discountedPrice").value = discountedPrice.toFixed(0) + " VNĐ";
+            } else {
+                document.getElementById("discountedPrice").value = "0 VNĐ";
+            }
+        });
+    </script>
+
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

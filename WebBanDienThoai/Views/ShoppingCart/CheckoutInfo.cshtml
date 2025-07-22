@@ -1,0 +1,91 @@
+﻿@model WebBanDienThoai.Models.OrderInfoModel
+@{
+    ViewData["Title"] = "Thông tin giao hàng";
+    var cart = ViewBag.Cart as WebBanDienThoai.Models.ShoppingCart;
+}
+
+<div class="container py-5">
+    <h2 class="text-center fw-bold mb-5">Thông tin giao hàng</h2>
+
+    <form method="post" asp-action="SubmitOrder" asp-controller="Payment">
+        <div class="row">
+            <!-- Thông tin giao hàng -->
+            <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm p-4 rounded-3">
+                    <h5 class="fw-semibold mb-4">Thông tin người nhận</h5>
+
+                    <div class="form-group mb-3">
+                        <label class="form-label">Họ và tên</label>
+                        <input type="text" name="FullName" class="form-control" value="@Model.FullName" required />
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label class="form-label">Số điện thoại</label>
+                        <input type="tel" name="PhoneNumber" class="form-control" value="@Model.PhoneNumber"
+                               pattern="^0[0-9]{9}$"
+                               title="Số điện thoại phải gồm 10 chữ số và bắt đầu bằng 0" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Địa chỉ giao hàng</label>
+                        <textarea name="ShippingAddress" class="form-control" rows="4" required>@Model.ShippingAddress</textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thông tin đơn hàng -->
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm p-4 rounded-3">
+                    <h5 class="fw-semibold mb-4">Thông tin đơn hàng</h5>
+
+                    <table class="table table-bordered align-middle text-center">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Sản phẩm</th>
+                                <th>Giá</th>
+                                <th>SL</th>
+                                <th>Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in cart.Items)
+                            {
+                                <tr>
+                                    <td class="text-start">@item.Name</td>
+                                    <td>@item.Price.ToString("N0")</td>
+                                    <td>@item.Quantity</td>
+                                    <td>@((item.Price * item.Quantity).ToString("N0")) VNĐ</td>
+                                </tr>
+                            }
+                            <tr class="fw-bold">
+                                <td colspan="3" class="text-end">Tổng cộng</td>
+                                <td>@cart.Items.Sum(i => i.Price * i.Quantity).ToString("N0")</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Hidden Inputs -->
+                    <input type="hidden" name="Amount" value="@cart.Items.Sum(i => i.Price * i.Quantity)" />
+                    <input type="hidden" name="OrderId" value="@Guid.NewGuid()" />
+                    <input type="hidden" name="OrderInformation" value="Thanh toán đơn hàng tại WebBanDienThoai" />
+                    <input type="hidden" id="PaymentMethod" name="PaymentMethod" value="" />
+
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" onclick="setMethod('MoMo')" class="btn btn-outline-danger">Thanh toán MoMo</button>
+                        <button type="submit" onclick="setMethod('VNPay')" class="btn btn-outline-primary">Thanh toán VNPay</button>
+                        <button type="submit" onclick="setMethod('PayPal')" class="btn btn-outline-warning">Thanh toán PayPal</button>
+                        <button type="submit" onclick="setMethod('COD')" class="btn btn-outline-success">Thanh toán khi nhận hàng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        function setMethod(method) {
+            document.getElementById("PaymentMethod").value = method;
+        }
+    </script>
+}

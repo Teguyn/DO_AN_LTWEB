@@ -1,0 +1,34 @@
+﻿@model WebBanDienThoai.Models.ApplicationUser
+
+@{
+    ViewData["Title"] = "Thêm Nhân viên";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="text-success mb-4"><i class="fas fa-user-plus"></i> Thêm Nhân viên mới</h2>
+
+<form asp-action="Add" method="post">
+    <div class="form-group mb-3">
+        <label asp-for="FullName" class="form-label">Họ và Tên</label>
+        <input asp-for="FullName" class="form-control" placeholder="Nhập tên đầy đủ" required />
+        <span asp-validation-for="FullName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Email" class="form-label">Email</label>
+        <input asp-for="Email" type="email" class="form-control" placeholder="Nhập email" required />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label">Mật khẩu</label>
+        <input type="password" name="password" class="form-control" placeholder="Nhập mật khẩu" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Lưu</button>
+    <a asp-action="Index" class="btn btn-secondary ms-2">Quay lại</a>
+</form>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

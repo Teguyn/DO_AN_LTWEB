@@ -1,0 +1,133 @@
+﻿@model WebBanDienThoai.Models.PaginatedList<WebBanDienThoai.Models.Order>
+@using WebBanDienThoai.Helpers
+@using WebBanDienThoai.Models
+@{
+    ViewData["Title"] = "Lịch sử đơn hàng";
+}
+
+<div class="container py-5">
+    <h2 class="text-center mb-4 fw-bold">Lịch sử đơn hàng của bạn</h2>
+
+    <!-- 🔍 FORM TÌM KIẾM VÀ LỌC -->
+    <form method="get" class="row g-3 mb-4">
+        <div class="col-md-5">
+            <input type="text" name="searchTerm" value="@ViewData["SearchTerm"]" class="form-control" placeholder="Tìm theo mã đơn hoặc ngày (dd/MM/yyyy)" />
+        </div>
+        <div class="col-md-4">
+            <select name="statusFilter" class="form-select">
+                <option value="">-- Tất cả trạng thái --</option>
+                @foreach (OrderStatus status in Enum.GetValues(typeof(OrderStatus)))
+                {
+                    <option value="@status" selected="@(ViewData["StatusFilter"]?.ToString() == status.ToString())">
+                        @Html.DisplayOrderStatus(status)
+                    </option>
+                }
+            </select>
+        </div>
+        <div class="col-md-3">
+            <button type="submit" class="btn btn-primary w-100">Tìm kiếm</button>
+        </div>
+    </form>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info text-center shadow-sm">
+            Không tìm thấy đơn hàng phù hợp.
+        </div>
+    }
+    else
+    {
+        @foreach (var order in Model)
+        {
+            <div class="card mb-4 shadow-sm rounded-4">
+                <div class="card-header bg-light d-flex justify-content-between flex-wrap align-items-center">
+                    <div class="fw-bold">Mã đơn hàng: <span class="text-primary">#@order.Id</span></div>
+                    <div class="text-muted small">Ngày đặt: @order.OrderDate.ToString("dd/MM/yyyy HH:mm")</div>
+                </div>
+
+                <div class="card-body">
+                    <table class="table table-sm table-borderless mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Sản phẩm</th>
+                                <th class="text-end">Đơn giá</th>
+                                <th class="text-center">SL</th>
+                                <th class="text-end">Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in order.OrderDetails)
+                            {
+                                <tr>
+                                    <td>@item.Product?.Name</td>
+                                    <td class="text-end">@item.Price.ToString("N0") VNĐ</td>
+                                    <td class="text-center">@item.Quantity</td>
+                                    <td class="text-end">@((item.Price * item.Quantity).ToString("N0")) VNĐ</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                    <hr class="my-3" />
+
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                        <div>
+                            <strong>Trạng thái:</strong>
+                            @Html.DisplayOrderStatus(order.Status)
+                        </div>
+
+                        <div>
+                            <strong>Tổng tiền:</strong>
+                            <span class="text-danger fw-bold">@order.TotalPrice.ToString("N0") VNĐ</span>
+                        </div>
+
+                        <div class="mt-2 mt-md-0">
+                            <a asp-action="Details" asp-route-id="@order.Id" class="btn btn-sm btn-outline-primary me-2">
+                                Xem chi tiết
+                            </a>
+                            @if (order.Status == OrderStatus.Pending)
+                            {
+                                <form asp-action="Cancel" asp-route-id="@order.Id" method="post" class="d-inline">
+                                    <button type="submit" class="btn btn-sm btn-outline-danger"
+                                            onclick="return confirm('Bạn chắc chắn muốn hủy đơn hàng này?');">
+                                        Hủy đơn
+                                    </button>
+                                </form>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <!-- 📄 PHÂN TRANG -->
+        @if (Model.TotalPages > 1)
+        {
+            <nav class="d-flex justify-content-center mt-4">
+                <ul class="pagination">
+                    <li class="page-item @(Model.HasPreviousPage ? "" : "disabled")">
+                        <a class="page-link" asp-action="Index"
+                           asp-route-pageNumber="@(Model.PageIndex - 1)"
+                           asp-route-searchTerm="@ViewData["SearchTerm"]"
+                           asp-route-statusFilter="@ViewData["StatusFilter"]">«</a>
+                    </li>
+                    @for (int i = 1; i <= Model.TotalPages; i++)
+                    {
+                        <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                            <a class="page-link" asp-action="Index"
+                               asp-route-pageNumber="@i"
+                               asp-route-searchTerm="@ViewData["SearchTerm"]"
+                               asp-route-statusFilter="@ViewData["StatusFilter"]">@i</a>
+                        </li>
+                    }
+                    <li class="page-item @(Model.HasNextPage ? "" : "disabled")">
+                        <a class="page-link" asp-action="Index"
+                           asp-route-pageNumber="@(Model.PageIndex + 1)"
+                           asp-route-searchTerm="@ViewData["SearchTerm"]"
+                           asp-route-statusFilter="@ViewData["StatusFilter"]">»</a>
+                    </li>
+                </ul>
+            </nav>
+        }
+    }
+</div>
